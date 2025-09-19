@@ -1,0 +1,75 @@
+-- Airline Table
+CREATE TABLE Airline (
+    AirlineID INT PRIMARY KEY,
+    Name NVARCHAR(100),
+    Address NVARCHAR(200),
+    ContactPerson NVARCHAR(100),
+    Telephone NVARCHAR(50)
+);
+
+-- Employee Table
+CREATE TABLE Employee (
+    EmployeeID INT PRIMARY KEY,
+    Name NVARCHAR(100),
+    Address NVARCHAR(200),
+    BirthDate DATE,
+    Gender CHAR(1),
+    Position NVARCHAR(50),
+    Qualifications NVARCHAR(100),
+    AirlineID INT,
+    FOREIGN KEY (AirlineID) REFERENCES Airline(AirlineID)
+);
+
+-- Aircraft Table
+CREATE TABLE Aircraft (
+    AircraftID INT PRIMARY KEY,
+    Model NVARCHAR(50),
+    Capacity INT,
+    AirlineID INT,
+    FOREIGN KEY (AirlineID) REFERENCES Airline(AirlineID)
+);
+
+-- Route Table
+CREATE TABLE Route (
+    RouteID INT PRIMARY KEY,
+    Origin NVARCHAR(50),
+    Destination NVARCHAR(50),
+    Distance INT,
+    Classification NVARCHAR(50)
+);
+
+-- Aircraft_Route Table (Many-to-Many relationship)
+CREATE TABLE Aircraft_Route (
+    AircraftID INT,
+    RouteID INT,
+    NumberOfPassengers INT,
+    PricePerPassenger DECIMAL(10,2),
+    DepartureDateTime DATETIME,
+    ArrivalDateTime DATETIME,
+    TravelTime TIME,
+    PRIMARY KEY (AircraftID, RouteID),
+    FOREIGN KEY (AircraftID) REFERENCES Aircraft(AircraftID),
+    FOREIGN KEY (RouteID) REFERENCES Route(RouteID)
+);
+
+-- Crew Table
+CREATE TABLE Crew (
+    CrewID INT PRIMARY KEY,
+    AircraftID INT UNIQUE,
+    MajorPilot NVARCHAR(100),
+    AssistantPilot NVARCHAR(100),
+    Hostess1 NVARCHAR(100),
+    Hostess2 NVARCHAR(100),
+    FOREIGN KEY (AircraftID) REFERENCES Aircraft(AircraftID)
+);
+
+-- Transaction Table
+CREATE TABLE Transaction (
+    TransactionID INT PRIMARY KEY,
+    AirlineID INT,
+    Date DATE,
+    Description NVARCHAR(200),
+    Amount DECIMAL(12,2),
+    TransactionType NVARCHAR(10),  -- 'Buy' or 'Sell'
+    FOREIGN KEY (AirlineID) REFERENCES Airline(AirlineID)
+);
