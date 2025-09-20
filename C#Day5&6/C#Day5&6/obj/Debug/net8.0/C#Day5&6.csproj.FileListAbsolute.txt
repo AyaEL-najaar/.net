@@ -1,0 +1,14 @@
+D:\C#\C#Day5&6\C#Day5&6\bin\Debug\net8.0\C#Day5&6.exe
+D:\C#\C#Day5&6\C#Day5&6\bin\Debug\net8.0\C#Day5&6.deps.json
+D:\C#\C#Day5&6\C#Day5&6\bin\Debug\net8.0\C#Day5&6.runtimeconfig.json
+D:\C#\C#Day5&6\C#Day5&6\bin\Debug\net8.0\C#Day5&6.dll
+D:\C#\C#Day5&6\C#Day5&6\bin\Debug\net8.0\C#Day5&6.pdb
+D:\C#\C#Day5&6\C#Day5&6\obj\Debug\net8.0\C#Day5&6.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\C#Day5&6\C#Day5&6\obj\Debug\net8.0\C#Day5&6.AssemblyInfoInputs.cache
+D:\C#\C#Day5&6\C#Day5&6\obj\Debug\net8.0\C#Day5&6.AssemblyInfo.cs
+D:\C#\C#Day5&6\C#Day5&6\obj\Debug\net8.0\C#Day5&6.csproj.CoreCompileInputs.cache
+D:\C#\C#Day5&6\C#Day5&6\obj\Debug\net8.0\C#Day5&6.dll
+D:\C#\C#Day5&6\C#Day5&6\obj\Debug\net8.0\refint\C#Day5&6.dll
+D:\C#\C#Day5&6\C#Day5&6\obj\Debug\net8.0\C#Day5&6.pdb
+D:\C#\C#Day5&6\C#Day5&6\obj\Debug\net8.0\C#Day5&6.genruntimeconfig.cache
+D:\C#\C#Day5&6\C#Day5&6\obj\Debug\net8.0\ref\C#Day5&6.dll
